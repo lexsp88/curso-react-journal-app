@@ -1,0 +1,15 @@
+.NothigSelected__mainContent{
+    align-items: center;
+    background-color: $primary;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    p{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,40 @@
+.register__title{
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+}
+
+.register__input{
+    color: $darkgrey;
+    border: 0px;
+    border-bottom: 1px solid $lightgrey;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+
+    transition: border-bottom .3s ease;
+
+    &:focus{
+        outline: none;
+        border-bottom: 1px solid $primary;
+    }
+}
+
+.register__socialNet{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.register__alert-error{
+    background-color: red;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
