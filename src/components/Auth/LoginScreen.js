@@ -30,7 +30,8 @@ export const LoginScreen = () => {
         <>
             <h3 className={`${esteElemento}__title`}>{ esteElemento.toUpperCase() }</h3>
 
-            <form onSubmit={handleLogin}> 
+            <form onSubmit={handleLogin}
+                    className="animate__animated animate__fadeIn animate__slower"> 
                 
                 <input type="text"
                         placeholder="Email"

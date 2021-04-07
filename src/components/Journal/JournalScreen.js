@@ -9,7 +9,7 @@ export const JournalScreen = () => {
 
     const esteElemento = "journal"
     return (
-        <div className={`${esteElemento}__mainContent`}>
+        <div className={`${esteElemento}__mainContent animate__animated animate__fadeIn animate__slower`}>
             <Sidebar />
             <main>
 

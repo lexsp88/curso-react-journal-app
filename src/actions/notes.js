@@ -18,7 +18,8 @@ export const startNewNote = () => {
 
         const doc = await db.collection(`${uid}/journal/notes`).add( newNote );
 
-        dispatch(activeNote( doc.id, newNote))
+        dispatch(activeNote( doc.id, newNote ));
+        dispatch(addNewNote( doc.id, newNote ));
 
     }
 
@@ -32,6 +33,17 @@ export const activeNote = ( id, note ) => ({
         ...note
     }
 }) 
+
+export const addNewNote = ( id, note ) => ({
+
+    type: types.notesAddNew,
+    payload: {
+        id, ...note
+    }
+    
+})
+
+
 
 export const startLoadingNotes = ( uid ) => {
     return async ( dispatch )=> {
@@ -63,7 +75,7 @@ export const startSaveNote = ( note ) =>{
 
         await db.doc(`${ uid }/journal/notes/${ note.id }`).update( noteToFirestore );
 
-        dispatch( refreshNote (note.id, noteToFirestore));
+        dispatch( refreshNote ( note.id, noteToFirestore ) );
         Swal.fire('Saved', note.title, 'success');
     }
 }

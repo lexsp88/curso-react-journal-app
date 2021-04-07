@@ -57,7 +57,8 @@ export const RegisterScreen = () => {
         <>
         <h3 className={`${esteElemento}__title`}>{ esteElemento.toUpperCase()  }</h3>
 
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister}
+                className="animate__animated animate__fadeIn animate__slower">
             {
                 ui.msgError &&
                 <div className={`${esteElemento}__alert-error`}>{ui.msgError}</div>
