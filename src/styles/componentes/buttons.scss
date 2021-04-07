@@ -33,6 +33,17 @@
     }
 }
 
+.btn-danger{
+    background-color: red;
+    
+    &:disabled{
+        background-color: lighten($color: red, $amount: 1);
+    }
+    &:hover{
+        background-color: darken($color: red, $amount: 20);
+    }
+}
+
 .google-btn {
     cursor: pointer;
     margin-top: 5px;
